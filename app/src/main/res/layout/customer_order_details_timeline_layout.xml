@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/timeline_cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="16dp">
+
+            <!-- order placed -->
+            <ImageView
+                android:id="@+id/order_step_one_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_order_status_processing"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/order_step_one_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="32dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/order_step_one_icon"
+                app:layout_constraintTop_toTopOf="@+id/order_step_one_icon">
+
+                <TextView
+                    android:id="@+id/order_step_one_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Order Placed"
+                    android:textColor="@color/blue_grey"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/order_step_one_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Loading..."
+                    android:textColor="@color/blue_grey"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- order confirmed -->
+            <View
+                android:id="@+id/order_step_two_progress"
+                android:layout_width="2dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/faded_pink"
+                app:layout_constraintEnd_toEndOf="@+id/order_step_one_icon"
+                app:layout_constraintStart_toStartOf="@+id/order_step_one_icon"
+                app:layout_constraintTop_toBottomOf="@+id/order_step_one_icon" />
+
+            <ImageView
+                android:id="@+id/order_step_two_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/ic_order_status_processing"
+                app:layout_constraintEnd_toEndOf="@+id/order_step_one_icon"
+                app:layout_constraintStart_toStartOf="@+id/order_step_one_icon"
+                app:layout_constraintTop_toBottomOf="@+id/order_step_two_progress" />
+
+            <LinearLayout
+                android:id="@+id/order_step_two_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="32dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/order_step_two_icon"
+                app:layout_constraintTop_toTopOf="@+id/order_step_two_icon">
+
+                <TextView
+                    android:id="@+id/order_step_two_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Order Confirmed"
+                    android:textColor="@color/blue_grey"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/order_step_two_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Loading..."
+                    android:textColor="@color/blue_grey"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- order processed -->
+            <View
+                android:id="@+id/order_step_three_progress"
+                android:layout_width="2dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/faded_pink"
+                app:layout_constraintEnd_toEndOf="@+id/order_step_two_icon"
+                app:layout_constraintStart_toStartOf="@+id/order_step_two_icon"
+                app:layout_constraintTop_toBottomOf="@+id/order_step_two_icon"/>
+
+            <ImageView
+                android:id="@+id/order_step_three_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/ic_order_status_processing"
+                app:layout_constraintEnd_toEndOf="@+id/order_step_two_icon"
+                app:layout_constraintStart_toStartOf="@+id/order_step_two_icon"
+                app:layout_constraintTop_toBottomOf="@+id/order_step_three_progress"/>
+
+            <LinearLayout
+                android:id="@+id/order_step_three_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="32dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/order_step_three_icon"
+                app:layout_constraintTop_toTopOf="@+id/order_step_three_icon">
+
+                <TextView
+                    android:id="@+id/order_step_three_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Order Processed"
+                    android:textColor="@color/blue_grey"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/order_step_three_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Loading..."
+                    android:textColor="@color/blue_grey"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- delivered -->
+            <View
+                android:id="@+id/order_final_step_progress"
+                android:layout_width="2dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/faded_pink"
+                app:layout_constraintEnd_toEndOf="@+id/order_step_three_icon"
+                app:layout_constraintStart_toStartOf="@+id/order_step_three_icon"
+                app:layout_constraintTop_toBottomOf="@+id/order_step_three_icon"/>
+
+            <ImageView
+                android:id="@+id/order_final_step_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/ic_order_status_processing"
+                app:layout_constraintEnd_toEndOf="@+id/order_step_three_icon"
+                app:layout_constraintStart_toStartOf="@+id/order_step_three_icon"
+                app:layout_constraintTop_toBottomOf="@+id/order_final_step_progress"/>
+
+            <LinearLayout
+                android:id="@+id/order_final_step_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="32dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/order_final_step_icon"
+                app:layout_constraintTop_toTopOf="@+id/order_final_step_icon">
+
+                <TextView
+                    android:id="@+id/order_final_step_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Delivered"
+                    android:textColor="@color/blue_grey"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/order_final_step_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Loading..."
+                    android:textColor="@color/blue_grey"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

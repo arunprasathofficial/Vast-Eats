@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".views.activities.MerchantAddFoodActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/faded_pink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/back_btn"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/ic_arrow_back_white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="2"
+                android:text="Add Food"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/food_image_cv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:backgroundTint="@color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/food_image"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_add_grey"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.cardview.widget.CardView>
+
+            <EditText
+                android:id="@+id/food_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/shape_rect01"
+                android:drawableStart="@drawable/ic_title_grey"
+                android:drawablePadding="5dp"
+                android:hint="Food Name"
+                android:textColorHint="@color/light_grey"
+                android:inputType="text"
+                android:padding="15sp"
+                android:textSize="15sp"
+                android:textColor="@color/blue_grey"/>
+
+            <TextView
+                android:id="@+id/food_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/shape_rect01"
+                android:drawableStart="@drawable/ic_category_grey"
+                android:drawableEnd="@drawable/ic_expand_more_grey"
+                android:drawablePadding="5dp"
+                android:hint="Category"
+                android:textColorHint="@color/light_grey"
+                android:textColor="@color/blue_grey"
+                android:inputType="text"
+                android:padding="15sp"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/shape_rect01"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:paddingStart="15dp"
+                    android:paddingBottom="15dp"
+                    android:src="@drawable/ic_description_grey" />
+
+                <EditText
+                    android:id="@+id/food_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="Description"
+                    android:textColorHint="@color/light_grey"
+                    android:inputType="textMultiLine"
+                    android:padding="15sp"
+                    android:paddingStart="5dp"
+                    android:scrollbars="vertical"
+                    android:textSize="15sp"
+                    android:textColor="@color/blue_grey"/>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/original_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/shape_rect01"
+                android:drawableStart="@drawable/ic_price_grey"
+                android:drawablePadding="5dp"
+                android:hint="Price"
+                android:textColorHint="@color/light_grey"
+                android:inputType="numberDecimal"
+                android:padding="15sp"
+                android:textSize="15sp"
+                android:textColor="@color/blue_grey"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="24dp"
+                android:background="@color/light_grey" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/discount_switch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/shape_rect01"
+                android:drawableStart="@drawable/ic_percentage_grey"
+                android:drawablePadding="5dp"
+                android:drawableTint="@color/blue_grey"
+                android:padding="15dp"
+                android:text="Discount"
+                android:textStyle="bold"
+                android:textColor="@color/blue_grey"
+                android:theme="@style/SwitchCompatTheme"/>
+
+            <EditText
+                android:id="@+id/discount_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/shape_rect01"
+                android:drawableStart="@drawable/ic_title_grey"
+                android:drawablePadding="5dp"
+                android:hint="Discount Title"
+                android:textColorHint="@color/light_grey"
+                android:padding="15sp"
+                android:textSize="15sp"
+                android:textColor="@color/blue_grey" />
+
+            <EditText
+                android:id="@+id/discounted_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/shape_rect01"
+                android:drawableStart="@drawable/ic_price_grey"
+                android:drawablePadding="5dp"
+                android:hint="Discounted Price"
+                android:textColorHint="@color/light_grey"
+                android:inputType="numberDecimal"
+                android:padding="15sp"
+                android:textSize="15sp"
+                android:textColor="@color/blue_grey" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="24dp"
+                android:background="@color/light_grey" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/availability_switch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/shape_rect01"
+                android:drawableStart="@drawable/ic_box_grey"
+                android:drawablePadding="5dp"
+                android:drawableTint="@color/blue_grey"
+                android:padding="15dp"
+                android:text="Availability Status"
+                android:textColor="@color/blue_grey"
+                android:textStyle="bold"
+                android:theme="@style/SwitchCompatTheme"/>
+
+            <Button
+                android:id="@+id/add_food_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/shape_rect02"
+                android:elevation="6dp"
+                android:paddingTop="18sp"
+                android:paddingBottom="18sp"
+                android:text="Add Food"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

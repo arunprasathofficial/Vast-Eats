@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.VastEats" parent="Theme.AppCompat.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/faded_pink</item>
+        <item name="colorPrimaryVariant">@color/faded_pink</item>
+        <item name="colorOnPrimary">@color/faded_pink</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:fontFamily">@font/nexa_regular</item>
+    </style>
+
+    <!-- SwitchCompat Theme -->
+    <style name="SwitchCompatTheme" parent="Theme.AppCompat.DayNight">
+        <item name="colorControlActivated">@color/faded_pink</item>
+    </style>
+</resources>

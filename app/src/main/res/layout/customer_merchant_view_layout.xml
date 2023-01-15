@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="10dp"
+    app:cardBackgroundColor="@color/white"
+    android:elevation="4dp"
+    app:cardCornerRadius="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/merchant_cover_image"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:backgroundTint="@color/white"
+            android:scaleType="centerCrop"
+            android:src="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+            android:id="@+id/merchant_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:c_border="true"
+            app:c_border_width="2dp"
+            app:c_border_color="@color/white"
+            android:layout_gravity="center"
+            android:src="@drawable/placeholder_color"
+            app:layout_constraintBottom_toBottomOf="@+id/merchant_cover_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/merchant_cover_image"
+            app:layout_constraintTop_toTopOf="@+id/merchant_cover_image" />
+
+        <TextView
+            android:id="@+id/merchant_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="Loading..."
+            android:textColor="@color/blue_grey"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/open_status"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/merchant_cover_image" />
+
+        <TextView
+            android:id="@+id/open_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Loading..."
+            android:textColor="@color/blue_grey"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/merchant_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/merchant_name" />
+
+        <TextView
+            android:id="@+id/merchant_city_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/shape_rect01"
+            android:backgroundTint="#F1F1F1"
+            android:paddingStart="8dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="4dp"
+            android:text="Loading..."
+            android:textColor="@color/blue_grey"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/merchant_name"
+            app:layout_constraintTop_toBottomOf="@+id/merchant_name" />
+
+        <TextView
+            android:id="@+id/merchant_ratings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/shape_rect01"
+            android:backgroundTint="#F1F1F1"
+            android:drawableStart="@drawable/ic_small_star_white"
+            android:drawablePadding="4dp"
+            android:drawableTint="@color/google_yellow"
+            android:paddingStart="8dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="4dp"
+            android:text="Loading..."
+            android:textColor="@color/blue_grey"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/merchant_city_name"
+            app:layout_constraintStart_toEndOf="@+id/merchant_city_name"
+            app:layout_constraintTop_toTopOf="@+id/merchant_city_name" />
+
+        <TextView
+            android:id="@+id/delivery_fee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/shape_rect01"
+            android:backgroundTint="#F1F1F1"
+            android:paddingStart="8dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="4dp"
+            android:text="Loading..."
+            android:textColor="@color/blue_grey"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/merchant_city_name"
+            app:layout_constraintStart_toEndOf="@+id/merchant_ratings"
+            app:layout_constraintTop_toTopOf="@+id/merchant_city_name" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

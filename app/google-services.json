@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "199644259001",
+    "project_id": "vast-eats-app",
+    "storage_bucket": "vast-eats-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:199644259001:android:02e948c8d53c89bf5a3168",
+        "android_client_info": {
+          "package_name": "com.mad.vasteats"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "199644259001-qhlv9h2cfr6e07gf7kogv2pm7pqm0lua.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mad.vasteats",
+            "certificate_hash": "130c596117a99adeac55e262cedde3187f9a1a6f"
+          }
+        },
+        {
+          "client_id": "199644259001-2p59l21uvg4lg7cg8akqhfcm4fh7gttu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_BWZ1RC1npgCxk6QO89C8H_xLNtZo4G0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "199644259001-2p59l21uvg4lg7cg8akqhfcm4fh7gttu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

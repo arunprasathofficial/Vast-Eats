@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/merchant_cover_image"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:backgroundTint="@color/white"
+        android:scaleType="centerCrop"
+        android:src="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+        android:id="@+id/merchant_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:src="@drawable/placeholder_color"
+        app:c_border="true"
+        app:c_border_color="@color/white"
+        app:c_border_width="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/merchant_cover_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/merchant_cover_image" />
+
+    <TextView
+        android:id="@+id/merchant_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="Loading..."
+        android:textColor="@color/faded_pink"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/merchant_cover_image" />
+
+    <TextView
+        android:id="@+id/merchant_city_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/shape_rect01"
+        android:backgroundTint="#F1F1F1"
+        android:paddingStart="8dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="4dp"
+        android:text="Loading..."
+        android:textColor="@color/blue_grey"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="@+id/merchant_name"
+        app:layout_constraintTop_toBottomOf="@+id/merchant_name" />
+
+    <TextView
+        android:id="@+id/merchant_ratings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/shape_rect01"
+        android:backgroundTint="#F1F1F1"
+        android:drawableStart="@drawable/ic_small_star_white"
+        android:drawablePadding="4dp"
+        android:drawableTint="@color/google_yellow"
+        android:paddingStart="8dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="4dp"
+        android:text="Loading..."
+        android:textColor="@color/blue_grey"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/merchant_city_name"
+        app:layout_constraintStart_toEndOf="@+id/merchant_city_name"
+        app:layout_constraintTop_toTopOf="@+id/merchant_city_name" />
+
+    <TextView
+        android:id="@+id/delivery_fee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/shape_rect01"
+        android:backgroundTint="#F1F1F1"
+        android:paddingStart="8dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="4dp"
+        android:text="Loading..."
+        android:textColor="@color/blue_grey"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/merchant_city_name"
+        app:layout_constraintStart_toEndOf="@+id/merchant_ratings"
+        app:layout_constraintTop_toTopOf="@+id/merchant_city_name" />
+
+    <View
+        android:id="@+id/top_divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/light_grey"
+        app:layout_constraintEnd_toEndOf="@+id/merchant_name"
+        app:layout_constraintStart_toStartOf="@+id/merchant_name"
+        app:layout_constraintTop_toBottomOf="@+id/merchant_city_name" />
+
+    <TextView
+        android:id="@+id/merchant_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Merchant Details"
+        android:textColor="@color/blue_grey"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/top_divider"
+        app:layout_constraintTop_toBottomOf="@+id/top_divider" />
+
+    <TextView
+        android:id="@+id/merchant_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:text="Loading..."
+        android:textColor="@color/faded_grey"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/phone_btn"
+        app:layout_constraintStart_toStartOf="@+id/merchant_details"
+        app:layout_constraintTop_toBottomOf="@+id/merchant_details" />
+
+    <ImageView
+        android:id="@+id/phone_btn"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_phone_white"
+        app:layout_constraintBottom_toBottomOf="@+id/map_btn"
+        app:layout_constraintEnd_toStartOf="@+id/map_btn"
+        app:layout_constraintTop_toTopOf="@+id/map_btn"
+        app:tint="@color/google_blue" />
+
+    <ImageView
+        android:id="@+id/map_btn"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_map_white"
+        app:layout_constraintBottom_toBottomOf="@+id/merchant_address"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/google_blue" />
+
+    <View
+        android:id="@+id/bottom_divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/light_grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/map_btn"
+        app:layout_constraintStart_toStartOf="@+id/merchant_address"
+        app:layout_constraintTop_toBottomOf="@+id/map_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
